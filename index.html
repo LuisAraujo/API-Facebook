@@ -26,31 +26,6 @@ Olá
         });
 
         FB.AppEvents.logPageView();
-
-        FB.a(function(){})
-        // Note: The call will only work if you accept the permission request
-        FB.login(function(){
-
-          fb =  FB.api(
-                    "/"+idPaginas+"/feed",
-                    "POST",
-                    {
-                        "message": post.msg,
-                        "type": post.type,
-                        "link": post.link
-
-                    },
-                    function (response) {
-                        if (response && !response.error) {
-                           console.log(response)
-                        }else{
-                            console.log("Erro: ",response)
-                        }
-                    }
-            );
-
-        },{scope: 'publish_actions'});
-
     };
 
 
@@ -61,6 +36,30 @@ Olá
         js.src = "//connect.facebook.net/pt_BR/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
+
+
+   // Note: The call will only work if you accept the permission request
+   FB.login(function(){
+
+       fb =  FB.api(
+               "/"+idPaginas+"/feed",
+               "POST",
+               {
+                   "message": post.msg,
+                   "type": post.type,
+                   "link": post.link
+
+               },
+               function (response) {
+                   if (response && !response.error) {
+                       console.log(response)
+                   }else{
+                       console.log("Erro: ",response)
+                   }
+               }
+       );
+
+   },{scope: 'publish_actions'});
 
 </script>
 <button id="bt">teste</button>
