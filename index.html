@@ -7,6 +7,17 @@
 <body>
 Olá
 <script>
+   //páginas
+   var idPaginas = [592202380964866];
+   //post
+   var post = new Object();
+   post.msg = "Novo vídeo, como prometi: Crie o seu próprio J.A.R.V.I.S. Aprenda a criar seu assistente em apenas alguns passos. #voice #jarvis #js #coding \n";
+   post.msg += " https://www.youtube.com/watch?v=tyIaL9xwhMo&feature=share  \n";
+   post. msg += " *código no github (descrição do vídeo)";
+
+   post.link = "https://www.youtube.com/watch?v=tyIaL9xwhMo&feature=share";
+   post.type ="video";
+   var fb;
     window.fbAsyncInit = function() {
         FB.init({
             appId      : '217836308624341',
@@ -16,36 +27,18 @@ Olá
 
         FB.AppEvents.logPageView();
 
-        /**
-        FB.ui({
-            method: 'share_open_graph',
-            action_type: 'og.likes',
-            action_properties: JSON.stringify({
-                object:'https://www.google.com',
-            })
-        }, function(response){
-            // Debug response (optional)
-            console.log(response);
-        });
-**/
-        var query = window.location.search.substring(1);
-        var vars = query.split("&");
-        var pair = vars[0].split("=");
-        //alert(decodeURIComponent(pair));
-
+        FB.a(function(){})
         // Note: The call will only work if you accept the permission request
         FB.login(function(){
-            msg = "Novo vídeo, como prometi: Crie o seu próprio J.A.R.V.I.S. Aprenda a criar seu assistente em apenas alguns passos. #voice #jarvis #js #coding \n";
-            msg += " https://www.youtube.com/watch?v=tyIaL9xwhMo&feature=share  \n";
-            msg += " *código no github (descrição do vídeo)";
-            FB.api(
-                    "/592202380964866/feed",
+
+          fb =  FB.api(
+                    "/"+idPaginas+"/feed",
                     "POST",
                     {
-                        "message": msg,
-                        "type":"video",
-                        "link":"https://www.youtube.com/watch?v=tyIaL9xwhMo&feature=share"
-                        //"picture": "http://netoqueiroz.com.br/imagens/postagens/5385/large/692ae4ea89d025fff300c418e7e3cbd8.jpg"
+                        "message": post.msg,
+                        "type": post.type,
+                        "link": post.link
+
                     },
                     function (response) {
                         if (response && !response.error) {
