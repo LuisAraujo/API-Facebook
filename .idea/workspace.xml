@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e3d4395-9736-40f7-9623-991e12901b0d" name="Default" comment="" />
+    <list default="true" id="8e3d4395-9736-40f7-9623-991e12901b0d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+    </list>
     <ignored path="API-Facebook.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +28,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="48" selection-start="479" selection-end="479" vertical-scroll-proportion="0.5178808" vertical-offset="0" max-vertical-offset="850">
+            <state line="32" column="58" selection-start="778" selection-end="778" vertical-scroll-proportion="0.58543044" vertical-offset="102" max-vertical-offset="935">
               <folding />
             </state>
           </provider>
@@ -177,7 +179,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="48" selection-start="479" selection-end="479" vertical-scroll-proportion="0.5178808" vertical-offset="0" max-vertical-offset="850">
+        <state line="32" column="58" selection-start="778" selection-end="778" vertical-scroll-proportion="0.58543044" vertical-offset="102" max-vertical-offset="935">
           <folding />
         </state>
       </provider>
