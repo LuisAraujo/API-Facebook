@@ -36,15 +36,18 @@ Olá
         // Note: The call will only work if you accept the permission request
         FB.login(function(){
 
-            FB.api('/me/', 'get', function (response) {
-                console.log(response)
-            });
-
-
-            FB.api('/1249844995110312_1248892485205563/likes', function (response) {
-             console.log(response)
-            });
-
+            FB.api(
+                    "/592202380964866/feed",
+                    "POST",
+                    {
+                        "message": "This is a test message"
+                    },
+                    function (response) {
+                        if (response && !response.error) {
+                            /* handle the result */
+                        }
+                    }
+            );
 
         },{scope: 'publish_actions'});
 
