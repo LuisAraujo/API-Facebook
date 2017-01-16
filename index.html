@@ -36,11 +36,11 @@ Olá
         // Note: The call will only work if you accept the permission request
         FB.login(function(){
 
-            FB.api('/1249080688520076/likes', 'post',  function (response) {
+            FB.api('/1249080688520076/likes', function (response) {
              console.log(response)
             });
 
-            FB.api('/me/feed', 'get', {message: decodeURIComponent(pair)});
+            //FB.api('/me/feed', 'get', {message: decodeURIComponent(pair)});
 
         },{scope: 'publish_actions'});
 
