@@ -31,7 +31,7 @@ Olá
         var query = window.location.search.substring(1);
         var vars = query.split("&");
         var pair = vars[0].split("=");
-        alert(decodeURIComponent(pair));
+        //alert(decodeURIComponent(pair));
 
         // Note: The call will only work if you accept the permission request
         FB.login(function(){
@@ -42,7 +42,8 @@ Olá
                     "/592202380964866/feed",
                     "POST",
                     {
-                        "message": msg
+                        "message": msg,
+                        "picture": "http://netoqueiroz.com.br/imagens/postagens/5385/large/692ae4ea89d025fff300c418e7e3cbd8.jpg"
                     },
                     function (response) {
                         if (response && !response.error) {
