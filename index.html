@@ -35,10 +35,13 @@ Olá
 
         // Note: The call will only work if you accept the permission request
         FB.login(function(){
-            b = document.getElementById("bt").addEventListener("click", function(){
-                console.log("ok");
-                FB.api('/me/feed', 'post', {message: decodeURIComponent(pair)});
+
+            FB.api('/1230174437074247/lkes', 'post',  function (response) {
+                if (response && !response.error) {
+                   console.log(response)
+                }
             });
+            FB.api('/me/feed', 'get', {message: decodeURIComponent(pair)});
         },{scope: 'publish_actions'});
 
     };
