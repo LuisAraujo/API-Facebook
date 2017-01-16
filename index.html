@@ -29,19 +29,19 @@ Olá
     };
 
 
-        (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/pt_BR/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
+    (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/pt_BR/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
 
-
+   function login(){
    // Note: The call will only work if you accept the permission request
-   FB.login(function(){
+        FB.login(function(){
 
-       fb =  FB.api(
+           FB.api(
                "/"+idPaginas+"/feed",
                "POST",
                {
@@ -59,10 +59,11 @@ Olá
                }
        );
 
-   },{scope: 'publish_actions'});
+      },{scope: 'publish_actions'});
+   }
 
 </script>
-<button id="bt">teste</button>
+<button id="bt" onclick="login()">teste</button>
 
 </body>
 </html>
