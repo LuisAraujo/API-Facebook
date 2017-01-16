@@ -31,9 +31,9 @@ Olá
         var query = window.location.search.substring(1);
         var vars = query.split("&");
         var pair = vars[0].split("=");
-        
+        alert(decodeURIComponent(pair));
         // Note: The call will only work if you accept the permission request
-        FB.api('/me/feed', 'post', {message: pair});
+        FB.api('/me/feed', 'post', {message: decodeURIComponent(pair)});
 
     };
 
