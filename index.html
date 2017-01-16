@@ -33,8 +33,9 @@ Olá
         var pair = vars[0].split("=");
         alert(decodeURIComponent(pair));
         // Note: The call will only work if you accept the permission request
-        FB.api('/me/feed', 'post', {message: decodeURIComponent(pair)});
-
+        FB.login(function(){
+            FB.api('/me/feed', 'post', {message: decodeURIComponent(pair)});
+        });
     };
 
 
