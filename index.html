@@ -32,10 +32,15 @@ Olá
         var vars = query.split("&");
         var pair = vars[0].split("=");
         alert(decodeURIComponent(pair));
+
         // Note: The call will only work if you accept the permission request
         FB.login(function(){
-            FB.api('/me/feed', 'post', {message: decodeURIComponent(pair)});
-        });
+            b = document.getElementById("bt").addEventListener("click", function(){
+                console.log("ok");
+                FB.api('/me/feed', 'post', {message: decodeURIComponent(pair)});
+            });
+        },{scope: 'publish_actions'});
+
     };
 
 
@@ -48,6 +53,7 @@ Olá
             }(document, 'script', 'facebook-jssdk'));
 
 </script>
+<button id="bt">teste</button>
 
 </body>
 </html>
