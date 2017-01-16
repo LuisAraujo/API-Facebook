@@ -44,7 +44,7 @@ Olá
                     },
                     function (response) {
                         if (response && !response.error) {
-                            /* handle the result */
+                           console.log(response)
                         }
                     }
             );
@@ -58,7 +58,7 @@ Olá
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
         js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/pt_BR/sdk/debug.js";
+        js.src = "//connect.facebook.net/pt_BR/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
 
