@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title></title>
 </head>
 <body>
-
+Olá
 <script>
-
     window.fbAsyncInit = function() {
         FB.init({
             appId      : '217836308624341',
@@ -16,7 +16,7 @@
 
         FB.AppEvents.logPageView();
 
-/**
+        /**
         FB.ui({
             method: 'share_open_graph',
             action_type: 'og.likes',
@@ -28,13 +28,12 @@
             console.log(response);
         });
 **/
-
-
-            FB.login(function(){
-                // Note: The call will only work if you accept the permission request
-                FB.api('/me/feed', 'post', {message: 'Hello, world!'});
-            }, {scope: 'publish_actions'});
-       
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        var pair = vars[0].split("=");
+        
+        // Note: The call will only work if you accept the permission request
+        FB.api('/me/feed', 'post', {message: pair});
 
     };
 
@@ -43,16 +42,11 @@
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
         js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk/debug.js";
+        js.src = "//connect.facebook.net/pt_BR/sdk/debug.js";
         fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
 
-
-
-
-
 </script>
-<button onclick="myFacebookLogin()">Login with Facebook</button>
 
 </body>
 </html>
