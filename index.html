@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title></title>
     <script src="jquery.js"></script>
+    <link href="style2.css" rel="stylesheet">
 </head>
 <body>
 <div style="background-color:  #e4252b; height: 50px; width: 100%">
@@ -21,12 +22,10 @@
 
 
 <div id="box-post" style="display: none; border: 1px solid #b5b5b5; border-radius: 5px; width: 500px; height: 230px; background-color: #ffffff; padding: 10px">
-
     <div style="float: left; width: 270px">
         <span>Texto do Post</span><br>
         <textarea id="text-post" style="width: 230px; height: 200px"></textarea>
     </div>
-
 
     <div style="float: left; margin-left: 10px; width: 220px;">
         <span style="width: 100%; margin-bottom: 3px; display: block">Tipo do Post</span>
@@ -58,6 +57,14 @@
             #fff; font-weight: bold; border-radius: 5px; margin-top: 7px" id="bt-send-post" onclick="login()">Postar</span>
         <span style="float: left; background-color: #80817e; display: block; height:20px; width: 80px; text-align: center; color:
             #fff; font-weight: bold; border-radius: 5px; margin-top: 7px; margin-left: 10px" id="bt-cancel-post" >Cancelas</span>
+    </div>
+</div>
+
+<div id="table-post" class="table">
+    <div class="table-head table-line">
+        <span class="line-post">Post nº</span>
+        <span class="line-idpost">ID POST</span>
+        <span class="line-status">Postado</span>
     </div>
 
 
@@ -116,9 +123,11 @@
         }
 
 
+
         FB.login(function(){
 
             for(var i = 0; i < idPaginas.length; i++){
+
                 FB.api(
                         "/"+idPaginas[i]+"/feed",
                         "POST",
@@ -130,9 +139,39 @@
                         },
                         function (response) {
                             if (response && !response.error) {
-                                console.log(response)
+
+                                if( $("#table-post").css("display") == "none")
+                                    $("#table-post").css("display","block");
+
+                                var div = '<div class="table-line ';
+
+                                if(($(".table-line").length-1)%2 == 0)
+                                    div += 'table-line-b">';
+                                else
+                                    div += 'table-line-c">';
+
+                                div +=   '<span  class="line-post">Post 0'+($(".table-line").length-1)+'</span>';
+                                div +=   '<span   class="line-idpost" >'+response+'</span>';
+                                div +=   '<span class="line-status">Postado</span></div>'
+
+                                $("#table-post").append(div);
+
                             }else{
-                                console.log("Erro: ",response)
+
+                                if( $("#table-post").css("display") == "none")
+                                    $("#table-post").css("display","block");
+
+                                var div = '<div class="table-line ';
+                                if(($(".table-line").length-1)%2 == 0)
+                                    div += 'table-line-b">';
+                                else
+                                    div += 'table-line-c">';
+
+                                div +=   '<span  class="line-post">Post 0'+($(".table-line").length-1)+'</span>';
+                                div +=   '<span   class="line-idpost" >???</span>';
+                                div +=   '<span class="line-status">Recusado</span></div>'
+
+                                $("#table-post").append(div);
                             }
                         });
 
