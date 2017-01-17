@@ -7,25 +7,65 @@
     <script src="main.js"></script>
     <link href="reset.css" rel="stylesheet">
     <link href="style2.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        var data = null;
+        google.charts.load('current', {'packages':['line']});
+        google.charts.setOnLoadCallback(startChart);
+
+
+        function startChart() {
+            data = new google.visualization.DataTable();
+            //get data
+            data.addColumn('string', 'Postagens');
+            data.addColumn('number', 'Javascript Brasil');
+            data.addColumn('number', 'Programação Web');
+
+            data.addRows([
+                ["Testando meu próprio JARVIS",  2,10],
+                ["Crie o seu próprio JARVIS",  1, 5]
+
+            ]);
+
+            drawChart();
+
+        }
+
+        function drawChart(){
+            var options = {
+                chart: {
+                    title: 'Postagens Recentes no Facebook',
+                    subtitle: 'Por curtidas'
+                }
+            };
+
+            var chart = new google.charts.Line(document.getElementById('linechart_material'));
+
+            chart.draw(data, options);
+        }
+    </script>
 </head>
 <body>
-
-<div class="site-head">Data Minner Center</div>
+<div id="display-block"></div>
+<div class="site-head">Data Miner Center</div>
 <div id="photo-channel"style="">
 
 </div>
 <div id="cont-graph">
-
-    <!-- gráficos -->
+    <div style="width: 300px; height: 300px; float: left;"></div>
+    <div id="linechart_material" style="float: left; width: 900px; height: 400px; font-size: 10px"></div>
 
 </div>
 <div id="cont-options">
 <span id="bt-novo-post">Novo Post</span>
 
-<div id="box-post" style="display: none; border: 1px solid #b5b5b5; border-radius: 5px; width: 500px; height: 230px; background-color: #ffffff; padding: 10px">
+<div id="box-post" style="">
     <div style="float: left; width: 270px">
         <span>Texto do Post</span><br>
-        <textarea id="text-post" style="width: 230px; height: 200px"></textarea>
+        <span class="c-textarea">
+            <textarea id="text-post" ></textarea>
+        </span>
     </div>
 
     <div style="float: left; margin-left: 10px; width: 220px;">
@@ -34,9 +74,14 @@
             <option value="video">video</option>
             <option value="photo">imagem</option>
         </select>
-        <span style="width: 100%; margin-bottom: 3px;  display: block">Link</span>
-        <input id="link-post" style="width: 100%">
-        <span style="width: 100%; margin-bottom: 3px; display: block">Tags</span>
+
+        <span class="lable-box">Link</span>
+
+        <span class="c-inp">
+            <input id="link-post">
+        </span>
+
+        <span  class="lable-box">Tags</span>
 
         <form style="font-size: 10px; display: block; height: 85px" action="">
             <div style="width: 50%; float: left">
@@ -46,15 +91,15 @@
                 <input type="checkbox" name="" value="">Python<br>
             </div>
             <div style="width: 50%; float: left">
-                <input type="checkbox" name="" value="">FontEnd<br>
-                <input type="checkbox" name="" value="">BackEnd<br>
-                <input type="checkbox" name="" value="">Javascript<br>
-                <input type="checkbox" name="" value="">Python<br>
+                <input type="checkbox" name="" value="">Games<br>
+                <input type="checkbox" name="" value="">HTML<br>
+                <input type="checkbox" name="" value="">Mobile<br>
+                <input type="checkbox" name="" value="">Desktop<br>
             </div>
         </form>
 
 
-        <span class="bt-01" id="bt-send-post" onclick="login()">Postar</span>
+        <span class="bt-01" id="bt-send-post" >Postar</span>
         <span class="bt-01" id="bt-cancel-post" >Cancelas</span>
     </div>
 </div>
@@ -67,22 +112,11 @@
     </div>
 </div>
 
-<span class="bt-01" id="" onclick="getData()">Get Teste</span>
 </div>
 
-<script>
-    $(document).ready(function(){
-        $("#bt-novo-post").click(function(){
-            $("#box-post").css("display","block");
-            $("#bt-novo-post").css("display","none");
-            $("#table-post").css("display","none");
-        });
+<div class="bt-01" onclick="getId()">teste</div>
 
-        setTimeout(getData, 1000);
-    });
-
-</script>
-
+</div>
 </body>
 </html>
 

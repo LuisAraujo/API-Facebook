@@ -16,7 +16,10 @@ format("truetype"),url("fonts/OpenSans-Regular.svg#OpenSans")
 format("svg");font-weight:normal;font-style:normal;
 }
 
-
+body, html{
+    width: 100%;
+    height: 100%;
+}
 .table-head{
     background-color: #707070;
     color: #ffffff;
@@ -80,7 +83,10 @@ format("svg");font-weight:normal;font-style:normal;
 }
 
 #cont-graph{
-    border-bottom: 1px solid #fff2fe;  height: 300px; width: 100%;
+    padding-top: 10px;
+    border-bottom: 1px solid #fff2fe;
+    height: 500px;
+    width: 100%;
 }
 
 #bt-novo-post{
@@ -133,4 +139,76 @@ format("svg");font-weight:normal;font-style:normal;
 #bt-cancel-post{
     background-color: #d3cfcd;
     color:#fff;
+}
+
+#box-post{
+    display: none;
+    border: 1px solid #b5b5b5;
+    border-radius: 5px;
+    width: 500px;
+    height: 230px;
+    background-color: #ffffff;
+    padding: 10px;
+    position: fixed;
+    top: calc(50% - 115px);
+    left: calc(50% - 250px);
+    z-index: 99999;
+    font-family: "Open Sans";
+    box-shadow: rgba(0,0,0,0.3) 3px 3px 1px;
+}
+
+#box-post input{
+    border: none;
+    background-color: transparent;
+}
+
+#box-post input:focus{
+    outline: none;
+}
+
+
+#box-post textarea{
+    border: none;
+    background-color: transparent;
+    width: 230px;
+    height: 200px;
+    resize: none;
+}
+
+#box-post textarea:focus{
+    outline: none;
+}
+
+.c-inp{
+    border: 1px solid #707070;
+    border-radius: 5px;
+    width: 100%;
+    padding: 2px;
+}
+
+.c-textarea{
+    border: 1px solid #707070;
+    border-radius: 5px;
+    width: 230px;
+    height: 200px;
+    padding: 2px;
+    display: block;
+}
+#display-block{
+
+   background-image: url('screenblock.png');
+   height: 100%;
+   width: 100%;
+    position: fixed;
+    top:0px;
+    left:0px;
+    z-index: 9999;
+    display: none;
+}
+
+.lable-box{
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: block;
 }

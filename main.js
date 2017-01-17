@@ -43,12 +43,27 @@ function getData(){
             });
     });
 }
+
+
+function getId(){
+
+    FB.login(function(){
+        FB.api('https://www.facebook.com/quemvotou/',
+            function(response){
+                console.log(response);
+            }
+        );
+    });
+
+}
 function login(){
 
     var text_post = document.getElementById("text-post").value;
     var link_post = document.getElementById("link-post").value;
     var type_post = document.getElementById("type-post")
     var type_post_selected = type_post.options[type_post.selectedIndex].value;
+
+
     //console.log(type_post_selected)
     if((text_post == "") && (link_post=="") && (type_post_selected== "")){
         return;
@@ -87,9 +102,7 @@ function login(){
 
                         div +=   '<span  class="line-post">Post 0'+($(".table-line").length-1)+'</span>';
                         div +=   '<span   class="line-idpost" >'+response.id+'</span>';
-                        div +=   '<span class="line-status">Postado</span></div>'
-
-                        console.log(response)
+                        div +=   '<span class="line-status">Postado</span></div>';
 
                         $("#table-post").append(div);
 
@@ -112,6 +125,8 @@ function login(){
                         div +=   '<span class="line-status">Recusado</span></div>'
 
                         $("#table-post").append(div);
+
+                        cancelPost();
                     }
                 });
 
@@ -119,3 +134,28 @@ function login(){
     }, {scope: 'publish_actions'});
 }
 
+
+function cancelPost(){
+    $("#display-block").css("display","none");
+    $("#box-post").css("display","none");
+    $("#bt-novo-post").css("display","block");
+}
+
+
+$(document).ready(function(){
+
+    $("#bt-novo-post").click(function(){
+        $("#box-post").css("display","block");
+        $("#bt-novo-post").css("display","none");
+        $("#table-post").css("display","none");
+        $("#display-block").css("display","block");
+    });
+
+    $("#bt-send-post").bind("click", function(){
+        login();
+    })
+
+    $("#bt-cancel-post").bind("click", function(){
+        cancelPost();
+    });
+});
