@@ -42,7 +42,7 @@ Olá
        // FB.login(function(){
        // for(var i = 0; i < idPaginas.length; i++){
 
-
+       FB.login(function(){
            FB.api(
                "/"+idPaginas[0]+"/feed",
                "POST",
@@ -58,10 +58,9 @@ Olá
                    }else{
                        console.log("Erro: ",response)
                    }
-               }
-           ,{scope: 'publish_actions'});
+               });
 
-    //  }
+      }, {scope: 'publish_actions'});
    }
 
 </script>
