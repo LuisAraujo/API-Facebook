@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e3d4395-9736-40f7-9623-991e12901b0d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/perfil_canal.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,7 +29,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="91" selection-start="3089" selection-end="3089" vertical-scroll-proportion="0.6792453" vertical-offset="499" max-vertical-offset="2703">
+            <state line="34" column="32" selection-start="1494" selection-end="1494" vertical-scroll-proportion="0.22911051" vertical-offset="408" max-vertical-offset="2703">
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -212,7 +211,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="91" selection-start="3089" selection-end="3089" vertical-scroll-proportion="0.6792453" vertical-offset="499" max-vertical-offset="2703">
+        <state line="34" column="32" selection-start="1494" selection-end="1494" vertical-scroll-proportion="0.22911051" vertical-offset="408" max-vertical-offset="2703">
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />

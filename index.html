@@ -32,7 +32,7 @@
         <span style="width: 100%; margin-bottom: 3px; display: block">Tipo do Post</span>
         <select id="type-post" style="margin-bottom: 10px; display: block; width: 100%;">
             <option value="video">video</option>
-            <option value="picture">imagem</option>
+            <option value="photo">imagem</option>
         </select>
         <span style="width: 100%; margin-bottom: 3px;  display: block">Link</span>
         <input id="link-post" style="width: 100%">
@@ -110,7 +110,7 @@
         var link_post = document.getElementById("link-post").value;
         var type_post = document.getElementById("type-post")
         var type_post_selected = type_post.options[type_post.selectedIndex].value;
-
+      //console.log(type_post_selected)
         if((text_post == "") && (link_post=="") && (type_post_selected== "")){
             return;
         }
