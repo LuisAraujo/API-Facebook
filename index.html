@@ -40,11 +40,11 @@ Olá
    function login(){
    // Note: The call will only work if you accept the permission request
        // FB.login(function(){
-        for(var i = 0; i < idPaginas.length; i++){
+       // for(var i = 0; i < idPaginas.length; i++){
 
 
            FB.api(
-               "/"+idPaginas[i]+"/feed",
+               "/"+idPaginas[0]+"/feed",
                "POST",
                {
                    "message": post.msg,
@@ -61,7 +61,7 @@ Olá
                }
            ,{scope: 'publish_actions'});
 
-      }
+    //  }
    }
 
 </script>
