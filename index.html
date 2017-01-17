@@ -140,8 +140,10 @@
                         function (response) {
                             if (response && !response.error) {
 
-                                if( $("#table-post").css("display") == "none")
+                                if( $("#table-post").css("display") == "none"){
                                     $("#table-post").css("display","block");
+                                    $("#box-post").css("display","none");
+                                }
 
                                 var div = '<div class="table-line ';
 
@@ -154,12 +156,16 @@
                                 div +=   '<span   class="line-idpost" >'+response+'</span>';
                                 div +=   '<span class="line-status">Postado</span></div>'
 
+                                console.log(response)
+
                                 $("#table-post").append(div);
 
                             }else{
 
-                                if( $("#table-post").css("display") == "none")
+                                if( $("#table-post").css("display") == "none"){
                                     $("#table-post").css("display","block");
+                                    $("#box-post").css("display","none");
+                                }
 
                                 var div = '<div class="table-line ';
                                 if(($(".table-line").length-1)%2 == 0)
