@@ -8,7 +8,7 @@
 Olá
 <script>
    //páginas
-   var idPaginas = [592202380964866];
+   var idPaginas = [592202380964866, 610980372398743];
    //post
    var post = new Object();
    post.msg = "Novo vídeo, como prometi: Crie o seu próprio J.A.R.V.I.S. Aprenda a criar seu assistente em apenas alguns passos. #voice #jarvis #js #coding \n";
@@ -40,9 +40,11 @@ Olá
    function login(){
    // Note: The call will only work if you accept the permission request
        // FB.login(function(){
+        for(var i = 0; i < idPaginas.length; i++){
+
 
            FB.api(
-               "/"+idPaginas+"/feed",
+               "/"+idPaginas[i]+"/feed",
                "POST",
                {
                    "message": post.msg,
@@ -59,7 +61,7 @@ Olá
                }
            ,{scope: 'publish_actions'});
 
-      //}
+      }
    }
 
 </script>
@@ -67,3 +69,10 @@ Olá
 
 </body>
 </html>
+
+<!--
+
+ http://findmyfbid.com/
+
+
+-->
