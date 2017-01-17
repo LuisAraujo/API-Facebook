@@ -3,21 +3,88 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title></title>
+    <script src="jquery.js"></script>
 </head>
 <body>
-Olá
-<script>
-   //páginas
-   var idPaginas = [592202380964866, 610980372398743];
-   //post
-   var post = new Object();
-   post.msg = "Novo vídeo, como prometi: Crie o seu próprio J.A.R.V.I.S. Aprenda a criar seu assistente em apenas alguns passos. #voice #jarvis #js #coding \n";
-   post.msg += " https://www.youtube.com/watch?v=tyIaL9xwhMo&feature=share  \n";
-   post. msg += " *código no github (descrição do vídeo)";
+<div style="background-color:  #e4252b; height: 50px; width: 100%">
 
-   post.link = "https://www.youtube.com/watch?v=tyIaL9xwhMo&feature=share";
-   post.type ="video";
-   var fb;
+</div>
+<div style="box-shadow: rgba(0,0,0,0.3) 3px 3px 1px; background-color: #fdfdff; height: 200px; width: 200px;  position: fixed; top: 20px; left: 20px; background-image: url(perfil_canal.jpg); background-repeat: no-repeat; background-size: 90%; background-position: center; ">
+
+</div>
+<div style="border-bottom: 1px solid #fff2fe;  height: 300px; width: 100%; ">
+
+</div>
+<span id="bt-novo-post" style="background-color: #e4252b; display: block; height:20px; width: 80px; text-align: center; color:
+#fff; font-weight: bold; border-radius: 5px; margin-top: 7px">Novo Post</span>
+
+
+
+<div id="box-post" style="display: none; border: 1px solid #b5b5b5; border-radius: 5px; width: 500px; height: 230px; background-color: #ffffff; padding: 10px">
+
+    <div style="float: left; width: 270px">
+        <span>Texto do Post</span><br>
+        <textarea id="text-post" style="width: 230px; height: 200px"></textarea>
+    </div>
+
+
+    <div style="float: left; margin-left: 10px; width: 220px;">
+        <span style="width: 100%; margin-bottom: 3px; display: block">Tipo do Post</span>
+        <select id="type-post" style="margin-bottom: 10px; display: block; width: 100%;">
+            <option value="video">video</option>
+            <option value="picture">imagem</option>
+        </select>
+        <span style="width: 100%; margin-bottom: 3px;  display: block">Link</span>
+        <input id="link-post" style="width: 100%">
+        <span style="width: 100%; margin-bottom: 3px; display: block">Tags</span>
+
+        <form style="font-size: 10px; display: block; height: 85px" action="">
+            <div style="width: 50%; float: left">
+                <input type="checkbox" name="vehicle" value="Bike">FontEnd<br>
+                <input type="checkbox" name="vehicle" value="Car">BackEnd<br>
+                <input type="checkbox" name="vehicle" value="Car">Javascript<br>
+                <input type="checkbox" name="vehicle" value="Car">Python<br>
+            </div>
+            <div style="width: 50%; float: left">
+                <input type="checkbox" name="vehicle" value="Bike">FontEnd<br>
+                <input type="checkbox" name="vehicle" value="Car">BackEnd<br>
+                <input type="checkbox" name="vehicle" value="Car">Javascript<br>
+                <input type="checkbox" name="vehicle" value="Car">Python<br>
+            </div>
+        </form>
+
+
+        <span style="float: left; background-color: #e4252b; display: block; height:20px; width: 80px; text-align: center; color:
+            #fff; font-weight: bold; border-radius: 5px; margin-top: 7px" id="bt-send-post" onclick="login()">Postar</span>
+        <span style="float: left; background-color: #80817e; display: block; height:20px; width: 80px; text-align: center; color:
+            #fff; font-weight: bold; border-radius: 5px; margin-top: 7px; margin-left: 10px" id="bt-cancel-post" >Cancelas</span>
+    </div>
+
+
+</div>
+
+
+<script>
+    $(document).ready(function(){
+      $("#bt-novo-post").click(function(){
+            $("#box-post").css("display","block");
+            $("#bt-novo-post").css("display","none");
+        });
+
+
+    })
+
+    //páginas
+    var idPaginas = [592202380964866, 610980372398743];
+    //post
+    var post = new Object();
+    post.msg = "Novo vídeo, como prometi: Crie o seu próprio J.A.R.V.I.S. Aprenda a criar seu assistente em apenas alguns passos. #voice #jarvis #js #coding \n";
+    post.msg += " https://www.youtube.com/watch?v=tyIaL9xwhMo&feature=share  \n";
+    post. msg += " *código no github (descrição do vídeo)";
+
+    post.link = "https://www.youtube.com/watch?v=tyIaL9xwhMo&feature=share";
+    post.type ="video";
+    var fb;
     window.fbAsyncInit = function() {
         FB.init({
             appId      : '217836308624341',
@@ -30,47 +97,54 @@ Olá
 
 
     (function(d, s, id){
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {return;}
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/pt_BR/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/pt_BR/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 
-   function login(){
-   // Note: The call will only work if you accept the permission request
-       // FB.login(function(){
-       //
+    function login(){
 
-       FB.login(function(){
+        var text_post = document.getElementById("text-post").value;
+        var link_post = document.getElementById("link-post").value;
+        var type_post = document.getElementById("type-post")
+        var type_post_selected = type_post.options[type_post.selectedIndex].value;
 
-           for(var i = 0; i < idPaginas.length; i++){
-           FB.api(
-               "/"+idPaginas[i]+"/feed",
-               "POST",
-               {
-                   "message": post.msg,
-                   "type": post.type,
-                   "link": post.link
+        if((text_post == "") && (link_post=="") && (type_post_selected== "")){
+            return;
+        }
 
-               },
-               function (response) {
-                   if (response && !response.error) {
-                       console.log(response)
-                   }else{
-                       console.log("Erro: ",response)
-                   }
-               });
 
-           }
-      }, {scope: 'publish_actions'});
-   }
+        FB.login(function(){
+
+            for(var i = 0; i < idPaginas.length; i++){
+                FB.api(
+                        "/"+idPaginas[i]+"/feed",
+                        "POST",
+                        {
+                            "message": text_post,
+                            "type": type_post,
+                            "link": link_post
+
+                        },
+                        function (response) {
+                            if (response && !response.error) {
+                                console.log(response)
+                            }else{
+                                console.log("Erro: ",response)
+                            }
+                        });
+
+            }
+        }, {scope: 'publish_actions'});
+    }
 
 </script>
-<button id="bt" onclick="login()">teste</button>
 
 </body>
 </html>
+
 
 <!--
 
