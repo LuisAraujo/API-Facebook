@@ -76,6 +76,7 @@
       $("#bt-novo-post").click(function(){
             $("#box-post").css("display","block");
             $("#bt-novo-post").css("display","none");
+            $("#table-post").css("display","none");
         });
 
 
@@ -143,6 +144,7 @@
                                 if( $("#table-post").css("display") == "none"){
                                     $("#table-post").css("display","block");
                                     $("#box-post").css("display","none");
+                                    $("#bt-novo-post").css("display","block");
                                 }
 
                                 var div = '<div class="table-line ';
@@ -153,7 +155,7 @@
                                     div += 'table-line-c">';
 
                                 div +=   '<span  class="line-post">Post 0'+($(".table-line").length-1)+'</span>';
-                                div +=   '<span   class="line-idpost" >'+response+'</span>';
+                                div +=   '<span   class="line-idpost" >'+response.id+'</span>';
                                 div +=   '<span class="line-status">Postado</span></div>'
 
                                 console.log(response)
@@ -165,6 +167,7 @@
                                 if( $("#table-post").css("display") == "none"){
                                     $("#table-post").css("display","block");
                                     $("#box-post").css("display","none");
+                                    $("#bt-novo-post").css("display","block");
                                 }
 
                                 var div = '<div class="table-line ';
