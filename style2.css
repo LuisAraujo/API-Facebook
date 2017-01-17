@@ -1,9 +1,31 @@
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+    font-family:"Open Sans Extrabold";src:url("fonts/OpenSans-ExtraBold.eot?")
+format("eot"),url("fonts/OpenSans-ExtraBold.woff")
+format("woff"),url("fonts/OpenSans-ExtraBold.ttf")
+format("truetype"),url("fonts/OpenSans-ExtraBold.svg#OpenSans-Extrabold")
+format("svg");font-weight:normal;font-style:normal;
+}
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */
+@font-face {
+    font-family:"Open Sans";src:url("fonts/OpenSans-Regular.eot?")
+format("eot"),url("fonts/OpenSans-Regular.woff")
+format("woff"),url("fonts/OpenSans-Regular.ttf")
+format("truetype"),url("fonts/OpenSans-Regular.svg#OpenSans")
+format("svg");font-weight:normal;font-style:normal;
+}
+
+
 .table-head{
-    background-color: #707070; color: #ffffff;
+    background-color: #707070;
+    color: #ffffff;
 }
 
 .table-line{
-    width: 100%; height: 20px; padding: 5px;
+    width: calc(100% - 5px);
+    height: 20px;
+    padding: 5px;
 }
 
 .table-line-b{
@@ -18,14 +40,97 @@
 }
 
 .line-idpost{
-    border-left: 1px solid #fff; padding-left: 5px; width: 200px; display: block; float: left
+    border-left: 1px solid #fff; padding-left: 5px; width: 350px; display: block; float: left
 }
 
 .line-status{
-    border-left: 1px solid #fff; padding-left: 5px; width: 100px; display: block; float: left
+    border-left: 1px solid #fff; padding-left: 5px; width: 100px; display: block; float: left;
 }
 
 .table{
-    width: 400px;
+    width: 570px;
     display: none;
+    margin-top: 10px;
+}
+
+.site-head{
+    padding: 10px;
+    background-color:  #e4252b;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+    color: #ae1f24;
+    text-shadow: 1px 1px #440f12, -1px -1px #ff4c4d;
+    font-size: 30px;
+    font-family: "Open Sans Extrabold";
+}
+
+#photo-channel{
+    box-shadow: rgba(0,0,0,0.3) 3px 3px 1px;
+    background-color: #fdfdff;
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-image: url(perfil_canal.jpg);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+}
+
+#cont-graph{
+    border-bottom: 1px solid #fff2fe;  height: 300px; width: 100%;
+}
+
+#bt-novo-post{
+    background-color: #e4252b;
+    display: block;
+    height:20px;
+    width: 90px;
+    text-align: center;
+    color:#fff;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 7px;
+    font-family: "Open Sans";
+    padding:5px;
+}
+
+#cont-options{
+    padding: 10px;
+}
+#bt-novo-post:hover{
+    cursor: pointer;
+}
+
+#bt-send-post{
+
+    background-color: #e4252b;
+    color:#fff;
+
+}
+
+.bt-01{
+    float: left;
+    display: block;
+    height:17px;
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 7px;
+    font-family: "Open Sans";
+    font-size: 15px;
+    padding: 2px;
+    margin-left: 5px;
+}
+
+.bt-01:hover{
+    cursor: pointer;
+}
+
+#bt-cancel-post{
+    background-color: #d3cfcd;
+    color:#fff;
 }

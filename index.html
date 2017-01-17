@@ -4,22 +4,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title></title>
     <script src="jquery.js"></script>
+    <link href="reset.css" rel="stylesheet">
     <link href="style2.css" rel="stylesheet">
 </head>
 <body>
-<div style="background-color:  #e4252b; height: 50px; width: 100%">
+
+<div class="site-head">Data Minner Center</div>
+<div id="photo-channel"style="">
 
 </div>
-<div style="box-shadow: rgba(0,0,0,0.3) 3px 3px 1px; background-color: #fdfdff; height: 200px; width: 200px;  position: fixed; top: 20px; left: 20px; background-image: url(perfil_canal.jpg); background-repeat: no-repeat; background-size: 90%; background-position: center; ">
+<div id="cont-graph">
+
+    <!-- gráficos -->
 
 </div>
-<div style="border-bottom: 1px solid #fff2fe;  height: 300px; width: 100%; ">
-
-</div>
-<span id="bt-novo-post" style="background-color: #e4252b; display: block; height:20px; width: 80px; text-align: center; color:
-#fff; font-weight: bold; border-radius: 5px; margin-top: 7px">Novo Post</span>
-
-
+<div id="cont-options">
+<span id="bt-novo-post">Novo Post</span>
 
 <div id="box-post" style="display: none; border: 1px solid #b5b5b5; border-radius: 5px; width: 500px; height: 230px; background-color: #ffffff; padding: 10px">
     <div style="float: left; width: 270px">
@@ -39,24 +39,22 @@
 
         <form style="font-size: 10px; display: block; height: 85px" action="">
             <div style="width: 50%; float: left">
-                <input type="checkbox" name="vehicle" value="Bike">FontEnd<br>
-                <input type="checkbox" name="vehicle" value="Car">BackEnd<br>
-                <input type="checkbox" name="vehicle" value="Car">Javascript<br>
-                <input type="checkbox" name="vehicle" value="Car">Python<br>
+                <input type="checkbox" name="" value="">FontEnd<br>
+                <input type="checkbox" name="" value="">BackEnd<br>
+                <input type="checkbox" name="" value="">Javascript<br>
+                <input type="checkbox" name="" value="">Python<br>
             </div>
             <div style="width: 50%; float: left">
-                <input type="checkbox" name="vehicle" value="Bike">FontEnd<br>
-                <input type="checkbox" name="vehicle" value="Car">BackEnd<br>
-                <input type="checkbox" name="vehicle" value="Car">Javascript<br>
-                <input type="checkbox" name="vehicle" value="Car">Python<br>
+                <input type="checkbox" name="" value="">FontEnd<br>
+                <input type="checkbox" name="" value="">BackEnd<br>
+                <input type="checkbox" name="" value="">Javascript<br>
+                <input type="checkbox" name="" value="">Python<br>
             </div>
         </form>
 
 
-        <span style="float: left; background-color: #e4252b; display: block; height:20px; width: 80px; text-align: center; color:
-            #fff; font-weight: bold; border-radius: 5px; margin-top: 7px" id="bt-send-post" onclick="login()">Postar</span>
-        <span style="float: left; background-color: #80817e; display: block; height:20px; width: 80px; text-align: center; color:
-            #fff; font-weight: bold; border-radius: 5px; margin-top: 7px; margin-left: 10px" id="bt-cancel-post" >Cancelas</span>
+        <span class="bt-01" id="bt-send-post" onclick="login()">Postar</span>
+        <span class="bt-01" id="bt-cancel-post" >Cancelas</span>
     </div>
 </div>
 
@@ -69,7 +67,7 @@
 
 
 </div>
-
+</div>
 
 <script>
     $(document).ready(function(){
@@ -80,6 +78,23 @@
         });
 
 
+/*
+
+        FB.login(function(){
+                FB.api(
+                        "/"+idPaginas[i]+"/likes",
+                        {
+                            "message": text_post,
+                            "type": type_post,
+                            "link": link_post
+
+                        },
+                        function (response) {
+                            if (response && !response.error) {
+                                console.log(response);
+                            }
+                        });
+        };*/
     })
 
     //páginas
