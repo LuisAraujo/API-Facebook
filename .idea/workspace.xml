@@ -27,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="41" selection-start="2579" selection-end="2579" vertical-scroll-proportion="0.37945205" vertical-offset="1083" max-vertical-offset="3604">
+            <state line="80" column="41" selection-start="2579" selection-end="2579" vertical-scroll-proportion="-13.431373" vertical-offset="675" max-vertical-offset="3604">
               <folding />
             </state>
           </provider>
@@ -45,26 +45,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interfaceDMYT.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="interfaceDMYT.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/interfaceDMYT.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="1" selection-start="2195" selection-end="2195" vertical-scroll-proportion="-4.1923075" vertical-offset="1336" max-vertical-offset="2091">
+            <state line="2" column="43" selection-start="50" selection-end="50" vertical-scroll-proportion="0.045033112" vertical-offset="0" max-vertical-offset="2091">
               <folding>
-                <marker date="1484772893239" expanded="true" signature="430:483" placeholder="SELECT COUNT..pagina..." />
-                <marker date="1484772893239" expanded="true" signature="671:715" placeholder="INSERT INTO ..." />
-                <marker date="1484772893239" expanded="true" signature="671:709" placeholder="INSERT INTO ..." />
-                <marker date="1484772893239" expanded="true" signature="671:704" placeholder="INSERT INTO ..." />
-                <marker date="1484772893239" expanded="true" signature="671:717" placeholder="INSERT INTO ..." />
-                <marker date="1484772893239" expanded="true" signature="981:1020" placeholder="SELECT idtag..tags..." />
-                <marker date="1484772893239" expanded="true" signature="999:1004" placeholder="INSERT INTO ..." />
-                <marker date="1484772893239" expanded="true" signature="1301:1356" placeholder="INSERT INTO ..." />
-                <marker date="1484772893239" expanded="true" signature="1766:1795" placeholder="SELECT nome ..tags..." />
-                <marker date="1484772893239" expanded="true" signature="2139:2191" placeholder="SELECT id, n..pagina..." />
-                <marker date="1484772893239" expanded="true" signature="2319:2858" placeholder="SELECT nome ..tags..." />
-                <marker date="1484772893239" expanded="true" signature="2319:2432" placeholder="SELECT nome ..tags..." />
-                <marker date="1484772893239" expanded="true" signature="2319:2419" placeholder="SELECT nome ..tags..." />
-                <marker date="1484772893239" expanded="true" signature="2358:2431" placeholder="SELECT tags_..tags_pagina..." />
-                <marker date="1484772893239" expanded="true" signature="2358:2417" placeholder="SELECT tags_..tags_pagina..." />
+                <marker date="1484773894128" expanded="true" signature="514:567" placeholder="SELECT COUNT..pagina..." />
+                <marker date="1484773894128" expanded="true" signature="755:799" placeholder="INSERT INTO ..." />
+                <marker date="1484773894128" expanded="true" signature="755:793" placeholder="INSERT INTO ..." />
+                <marker date="1484773894128" expanded="true" signature="755:788" placeholder="INSERT INTO ..." />
+                <marker date="1484773894128" expanded="true" signature="755:801" placeholder="INSERT INTO ..." />
+                <marker date="1484773894128" expanded="true" signature="1065:1104" placeholder="SELECT idtag..tags..." />
+                <marker date="1484773894128" expanded="true" signature="1083:1088" placeholder="INSERT INTO ..." />
+                <marker date="1484773894128" expanded="true" signature="1385:1440" placeholder="INSERT INTO ..." />
+                <marker date="1484773894128" expanded="true" signature="1850:1879" placeholder="SELECT nome ..tags..." />
+                <marker date="1484773894128" expanded="true" signature="2223:2275" placeholder="SELECT id, n..pagina..." />
+                <marker date="1484773894128" expanded="true" signature="2403:2942" placeholder="SELECT nome ..tags..." />
+                <marker date="1484773894128" expanded="true" signature="2403:2516" placeholder="SELECT nome ..tags..." />
+                <marker date="1484773894128" expanded="true" signature="2403:2503" placeholder="SELECT nome ..tags..." />
+                <marker date="1484773894128" expanded="true" signature="2442:2515" placeholder="SELECT tags_..tags_pagina..." />
+                <marker date="1484773894128" expanded="true" signature="2442:2501" placeholder="SELECT tags_..tags_pagina..." />
               </folding>
             </state>
           </provider>
@@ -86,8 +86,8 @@
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/style2.css" />
         <option value="$PROJECT_DIR$/main.js" />
-        <option value="$PROJECT_DIR$/interfaceDMYT.php" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/interfaceDMYT.php" />
       </list>
     </option>
   </component>
@@ -263,21 +263,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="13" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="731">
           <folding>
-            <marker date="1484772893239" expanded="true" signature="430:483" placeholder="SELECT COUNT..pagina..." />
-            <marker date="1484772893239" expanded="true" signature="671:715" placeholder="INSERT INTO ..." />
-            <marker date="1484772893239" expanded="true" signature="671:709" placeholder="INSERT INTO ..." />
-            <marker date="1484772893239" expanded="true" signature="671:704" placeholder="INSERT INTO ..." />
-            <marker date="1484772893239" expanded="true" signature="671:717" placeholder="INSERT INTO ..." />
-            <marker date="1484772893239" expanded="true" signature="981:1020" placeholder="SELECT idtag..tags..." />
-            <marker date="1484772893239" expanded="true" signature="999:1004" placeholder="INSERT INTO ..." />
-            <marker date="1484772893239" expanded="true" signature="1301:1356" placeholder="INSERT INTO ..." />
-            <marker date="1484772893239" expanded="true" signature="1766:1795" placeholder="SELECT nome ..tags..." />
-            <marker date="1484772893239" expanded="true" signature="2139:2191" placeholder="SELECT id, n..pagina..." />
-            <marker date="1484772893239" expanded="true" signature="2319:2858" placeholder="SELECT nome ..tags..." />
-            <marker date="1484772893239" expanded="true" signature="2319:2432" placeholder="SELECT nome ..tags..." />
-            <marker date="1484772893239" expanded="true" signature="2319:2419" placeholder="SELECT nome ..tags..." />
-            <marker date="1484772893239" expanded="true" signature="2358:2431" placeholder="SELECT tags_..tags_pagina..." />
-            <marker date="1484772893239" expanded="true" signature="2358:2417" placeholder="SELECT tags_..tags_pagina..." />
+            <marker date="1484773894128" expanded="true" signature="514:567" placeholder="SELECT COUNT..pagina..." />
+            <marker date="1484773894128" expanded="true" signature="755:799" placeholder="INSERT INTO ..." />
+            <marker date="1484773894128" expanded="true" signature="755:793" placeholder="INSERT INTO ..." />
+            <marker date="1484773894128" expanded="true" signature="755:788" placeholder="INSERT INTO ..." />
+            <marker date="1484773894128" expanded="true" signature="755:801" placeholder="INSERT INTO ..." />
+            <marker date="1484773894128" expanded="true" signature="1065:1104" placeholder="SELECT idtag..tags..." />
+            <marker date="1484773894128" expanded="true" signature="1083:1088" placeholder="INSERT INTO ..." />
+            <marker date="1484773894128" expanded="true" signature="1385:1440" placeholder="INSERT INTO ..." />
+            <marker date="1484773894128" expanded="true" signature="1850:1879" placeholder="SELECT nome ..tags..." />
+            <marker date="1484773894128" expanded="true" signature="2223:2275" placeholder="SELECT id, n..pagina..." />
+            <marker date="1484773894128" expanded="true" signature="2403:2942" placeholder="SELECT nome ..tags..." />
+            <marker date="1484773894128" expanded="true" signature="2403:2516" placeholder="SELECT nome ..tags..." />
+            <marker date="1484773894128" expanded="true" signature="2403:2503" placeholder="SELECT nome ..tags..." />
+            <marker date="1484773894128" expanded="true" signature="2442:2515" placeholder="SELECT tags_..tags_pagina..." />
+            <marker date="1484773894128" expanded="true" signature="2442:2501" placeholder="SELECT tags_..tags_pagina..." />
           </folding>
         </state>
       </provider>
@@ -364,33 +364,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interfaceDMYT.php">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="1" selection-start="2195" selection-end="2195" vertical-scroll-proportion="-4.1923075" vertical-offset="1336" max-vertical-offset="2091">
-          <folding>
-            <marker date="1484772893239" expanded="true" signature="430:483" placeholder="SELECT COUNT..pagina..." />
-            <marker date="1484772893239" expanded="true" signature="671:715" placeholder="INSERT INTO ..." />
-            <marker date="1484772893239" expanded="true" signature="671:709" placeholder="INSERT INTO ..." />
-            <marker date="1484772893239" expanded="true" signature="671:704" placeholder="INSERT INTO ..." />
-            <marker date="1484772893239" expanded="true" signature="671:717" placeholder="INSERT INTO ..." />
-            <marker date="1484772893239" expanded="true" signature="981:1020" placeholder="SELECT idtag..tags..." />
-            <marker date="1484772893239" expanded="true" signature="999:1004" placeholder="INSERT INTO ..." />
-            <marker date="1484772893239" expanded="true" signature="1301:1356" placeholder="INSERT INTO ..." />
-            <marker date="1484772893239" expanded="true" signature="1766:1795" placeholder="SELECT nome ..tags..." />
-            <marker date="1484772893239" expanded="true" signature="2139:2191" placeholder="SELECT id, n..pagina..." />
-            <marker date="1484772893239" expanded="true" signature="2319:2858" placeholder="SELECT nome ..tags..." />
-            <marker date="1484772893239" expanded="true" signature="2319:2432" placeholder="SELECT nome ..tags..." />
-            <marker date="1484772893239" expanded="true" signature="2319:2419" placeholder="SELECT nome ..tags..." />
-            <marker date="1484772893239" expanded="true" signature="2358:2431" placeholder="SELECT tags_..tags_pagina..." />
-            <marker date="1484772893239" expanded="true" signature="2358:2417" placeholder="SELECT tags_..tags_pagina..." />
-          </folding>
+        <state line="80" column="41" selection-start="2579" selection-end="2579" vertical-scroll-proportion="-13.431373" vertical-offset="675" max-vertical-offset="3604">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/interfaceDMYT.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="41" selection-start="2579" selection-end="2579" vertical-scroll-proportion="0.37945205" vertical-offset="1083" max-vertical-offset="3604">
-          <folding />
+        <state line="2" column="43" selection-start="50" selection-end="50" vertical-scroll-proportion="0.045033112" vertical-offset="0" max-vertical-offset="2091">
+          <folding>
+            <marker date="1484773894128" expanded="true" signature="514:567" placeholder="SELECT COUNT..pagina..." />
+            <marker date="1484773894128" expanded="true" signature="755:799" placeholder="INSERT INTO ..." />
+            <marker date="1484773894128" expanded="true" signature="755:793" placeholder="INSERT INTO ..." />
+            <marker date="1484773894128" expanded="true" signature="755:788" placeholder="INSERT INTO ..." />
+            <marker date="1484773894128" expanded="true" signature="755:801" placeholder="INSERT INTO ..." />
+            <marker date="1484773894128" expanded="true" signature="1065:1104" placeholder="SELECT idtag..tags..." />
+            <marker date="1484773894128" expanded="true" signature="1083:1088" placeholder="INSERT INTO ..." />
+            <marker date="1484773894128" expanded="true" signature="1385:1440" placeholder="INSERT INTO ..." />
+            <marker date="1484773894128" expanded="true" signature="1850:1879" placeholder="SELECT nome ..tags..." />
+            <marker date="1484773894128" expanded="true" signature="2223:2275" placeholder="SELECT id, n..pagina..." />
+            <marker date="1484773894128" expanded="true" signature="2403:2942" placeholder="SELECT nome ..tags..." />
+            <marker date="1484773894128" expanded="true" signature="2403:2516" placeholder="SELECT nome ..tags..." />
+            <marker date="1484773894128" expanded="true" signature="2403:2503" placeholder="SELECT nome ..tags..." />
+            <marker date="1484773894128" expanded="true" signature="2442:2515" placeholder="SELECT tags_..tags_pagina..." />
+            <marker date="1484773894128" expanded="true" signature="2442:2501" placeholder="SELECT tags_..tags_pagina..." />
+          </folding>
         </state>
       </provider>
     </entry>

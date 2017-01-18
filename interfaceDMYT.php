@@ -1,9 +1,9 @@
 <?php
 
-$localhost ='127.0.0.1';
-$user='root';
-$senha = 'root';
-$database = "datamineryt";
+$localhost ="http://www.luisaraujo.com.br";
+$user= "luisa076_root"; //'root';
+$senha = 'wn(t0NTaSfBb'; //'root';
+$database = "luisa076_canalyoutube"; //"datamineryt";
 
 $link = @mysql_connect($localhost, $user, $senha);
 
