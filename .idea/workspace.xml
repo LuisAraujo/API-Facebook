@@ -27,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="0" selection-start="2580" selection-end="2580" vertical-scroll-proportion="57.26923" vertical-offset="2866" max-vertical-offset="3621">
+            <state line="80" column="41" selection-start="2579" selection-end="2579" vertical-scroll-proportion="0.37945205" vertical-offset="1083" max-vertical-offset="3604">
               <folding />
             </state>
           </provider>
@@ -45,10 +45,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interfaceDMYT.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="interfaceDMYT.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interfaceDMYT.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="1" selection-start="2195" selection-end="2195" vertical-scroll-proportion="0.14437085" vertical-offset="1336" max-vertical-offset="2091">
+            <state line="85" column="1" selection-start="2195" selection-end="2195" vertical-scroll-proportion="-4.1923075" vertical-offset="1336" max-vertical-offset="2091">
               <folding>
                 <marker date="1484772893239" expanded="true" signature="430:483" placeholder="SELECT COUNT..pagina..." />
                 <marker date="1484772893239" expanded="true" signature="671:715" placeholder="INSERT INTO ..." />
@@ -85,9 +85,9 @@
       <list>
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/style2.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/interfaceDMYT.php" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -357,13 +357,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="0" selection-start="2580" selection-end="2580" vertical-scroll-proportion="57.26923" vertical-offset="2866" max-vertical-offset="3621">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="102" column="0" selection-start="3314" selection-end="3314" vertical-scroll-proportion="-18.84" vertical-offset="1263" max-vertical-offset="6868">
@@ -373,7 +366,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/interfaceDMYT.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="1" selection-start="2195" selection-end="2195" vertical-scroll-proportion="0.14437085" vertical-offset="1336" max-vertical-offset="2091">
+        <state line="85" column="1" selection-start="2195" selection-end="2195" vertical-scroll-proportion="-4.1923075" vertical-offset="1336" max-vertical-offset="2091">
           <folding>
             <marker date="1484772893239" expanded="true" signature="430:483" placeholder="SELECT COUNT..pagina..." />
             <marker date="1484772893239" expanded="true" signature="671:715" placeholder="INSERT INTO ..." />
@@ -391,6 +384,13 @@
             <marker date="1484772893239" expanded="true" signature="2358:2431" placeholder="SELECT tags_..tags_pagina..." />
             <marker date="1484772893239" expanded="true" signature="2358:2417" placeholder="SELECT tags_..tags_pagina..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="41" selection-start="2579" selection-end="2579" vertical-scroll-proportion="0.37945205" vertical-offset="1083" max-vertical-offset="3604">
+          <folding />
         </state>
       </provider>
     </entry>
