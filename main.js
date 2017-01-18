@@ -83,7 +83,7 @@ function cadastraPagina(url,tags){
     FB.login(function(){
         FB.api(url,
             function(response){
-                var jquery = $.post( "http://luisaraujo.com.br/dmyt/interfaceDMYT.php",{tipo: "insert_page", name:response.name, id:response.id, tags:tags}, function() { })
+                var jquery = $.post( "http://luisaraujo.com.br/dmyt/",{tipo: "insert_page", name:response.name, id:response.id, tags:tags}, function() { })
                     .done(function(data){
                         data_json = jQuery.parseJSON(data);
                         if(data_json.status == "erro01")
@@ -105,7 +105,7 @@ function cadastraPagina(url,tags){
 
 function getTags( callback ){
 
-    var jquery = $.post( "http://luisaraujo.com.br/dmyt/interfaceDMYT.php",{tipo: "get_tags"}, function() { })
+    var jquery = $.post( "http://luisaraujo.com.br/dmyt/",{tipo: "get_tags"}, function() { })
         .done(function(data){
             callback( data.split(" "));
 
@@ -116,7 +116,7 @@ function getTags( callback ){
 
 function getPaginas( callback ){
 
-    var jquery = $.post( "http://luisaraujo.com.br/dmyt/interfaceDMYT.php",{tipo: "get_paginas"}, function() { })
+    var jquery = $.post( "http://luisaraujo.com.br/dmyt/",{tipo: "get_paginas"}, function() { })
         .done(function(data){
             data_json = [];
             arr = data.split("&");
