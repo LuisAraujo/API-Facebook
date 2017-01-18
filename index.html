@@ -11,16 +11,25 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         var data = null;
+        var chart = null;
+        var options = null;
         google.charts.load('current', {'packages':['line']});
         google.charts.setOnLoadCallback(startChart);
 
 
         function startChart() {
             data = new google.visualization.DataTable();
+
             //get data
             data.addColumn('string', 'Postagens');
-            data.addColumn('number', 'Javascript Brasil');
-            data.addColumn('number', 'Programação Web');
+            arrPost = [{nome: "Testando meu próprio JARVIS", id:000} , {nome:"Crie o seu próprio JARVIS", id:001}];
+            arrPostCurtida = [];
+            arrPaginas = ['Javascript Brasil', 'Programação Web'];
+
+            for(var j = 0; j< arrPost.length; j++){
+                data.addColumn('number', arrPaginas[j]);
+            }
+
 
             data.addRows([
                 ["Testando meu próprio JARVIS",  2,10],
@@ -33,14 +42,14 @@
         }
 
         function drawChart(){
-            var options = {
+            options = {
                 chart: {
                     title: 'Postagens Recentes no Facebook',
                     subtitle: 'Por curtidas'
                 }
             };
 
-            var chart = new google.charts.Line(document.getElementById('linechart_material'));
+            chart = new google.charts.Line(document.getElementById('linechart_material'));
 
             chart.draw(data, options);
         }
@@ -49,27 +58,104 @@
 <body>
 <div id="display-block"></div>
 <div class="site-head">Data Miner Center</div>
+
 <div id="photo-channel"style="">
 
 </div>
 <div id="cont-graph">
-    <div style="width: 300px; height: 300px; float: left;"></div>
-    <div id="linechart_material" style="float: left; width: 900px; height: 400px; font-size: 10px"></div>
 
+    <div style="width: 300px; height: 300px; float: left;"></div>
+
+    <div style="float: left; width: 900px; height: 400px; font-size: 10px">
+
+        <div class="menu"><span id="bt-graficos">GRÁFICOS</span><span id="bt-pagina">PÁGINAS</span><span id="bt-post">POSTAGENS</span></div>
+
+        <div  id="linechart_material" class="cont-painel">
+        </div>
+
+        <div  id="gerencia_paginas" class="cont-painel">
+         <div style="float: left; width: 400px">
+          <span style="font-size: 15px; font-weight: bold; color: #444;">Lista de Páginas/Grupos</span>
+          <div id="bt-new-page" ><img src="new-page.png">Nova Página/Grupo</div>
+              <div id="cont-list_paginas">
+                  <div id="list_paginas">
+
+                  </div>
+              </div>
+             <div id="bt-more-page"></div>
+             <div id="bt-less-page"></div>
+        </div>
+
+
+        <div id="cont-edit-paginas">
+            <div id="cont-lable-pagina" class="cont-lable">
+                <span class="label">Página:</span>
+                <span class="c-inp2">
+                    <input class="inp-default" id="nome-pagina">
+                </span>
+
+            </div>
+            <div  id="cont-lable-id" class="cont-lable">
+                <span class="label">ID:</span>
+                 <span class="c-inp2">
+                    <input class="inp-default" id="id-pagina">
+                </span>
+
+            </div>
+            <div  id="cont-lable-url" class="cont-lable">
+                <span class="label">URL:</span>
+                <span class="c-inp2">
+                    <input class="inp-default" id="url-pagina">
+                </span>
+            </div>
+            <br>
+            <div>
+                <span class="cont-lable">TAGS:</span>
+                <form id="form-tag-editpost" style="font-size: 10px; display: block; height: 85px" action="">
+
+                    <div id="cont-inp-edit-01" style="width: 50%; float: left">
+
+                    </div>
+                    <div id="cont-inp-edit-02" >
+
+                    </div>
+                </form>
+            </div>
+
+            <span class="bt-page" id="bt-remove-page">Delete</span>
+            <span class="bt-page" id="bt-save-page">Salvar</span>
+            <span class="bt-page" id="bt-cadastre-page" >Cadastrar</span>
+
+        </div>
+
+
+        </div>
+    </div>
 </div>
 <div id="cont-options">
 <span id="bt-novo-post">Novo Post</span>
 
+
+
+
+
+
 <div id="box-post" style="">
+
     <div style="float: left; width: 270px">
-        <span>Texto do Post</span><br>
+
+        <span class="lable-box">Nome</span>
+        <span class="c-inp">
+            <input id="nome-post">
+        </span>
+        <span class="lable-box">Texto do Post</span>
         <span class="c-textarea">
             <textarea id="text-post" ></textarea>
         </span>
     </div>
 
     <div style="float: left; margin-left: 10px; width: 220px;">
-        <span style="width: 100%; margin-bottom: 3px; display: block">Tipo do Post</span>
+        <span class="lable-box">Tipo do Post</span>
         <select id="type-post" style="margin-bottom: 10px; display: block; width: 100%;">
             <option value="video">video</option>
             <option value="photo">imagem</option>
@@ -83,24 +169,18 @@
 
         <span  class="lable-box">Tags</span>
 
-        <form style="font-size: 10px; display: block; height: 85px" action="">
-            <div style="width: 50%; float: left">
-                <input type="checkbox" name="" value="">FontEnd<br>
-                <input type="checkbox" name="" value="">BackEnd<br>
-                <input type="checkbox" name="" value="">Javascript<br>
-                <input type="checkbox" name="" value="">Python<br>
+        <form id="form-tag-newpost" style="font-size: 10px; display: block; height: 85px" action="">
+            <div class="cont-inp" id="cont-inp-01">
+
             </div>
-            <div style="width: 50%; float: left">
-                <input type="checkbox" name="" value="">Games<br>
-                <input type="checkbox" name="" value="">HTML<br>
-                <input type="checkbox" name="" value="">Mobile<br>
-                <input type="checkbox" name="" value="">Desktop<br>
+            <div id="cont-inp-02">
+
             </div>
         </form>
 
 
         <span class="bt-01" id="bt-send-post" >Postar</span>
-        <span class="bt-01" id="bt-cancel-post" >Cancelas</span>
+        <span class="bt-01" id="bt-cancel-post" >Cancelar</span>
     </div>
 </div>
 
@@ -114,7 +194,6 @@
 
 </div>
 
-<div class="bt-01" onclick="getId()">teste</div>
 
 </div>
 </body>

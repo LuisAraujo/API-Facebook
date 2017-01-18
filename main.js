@@ -44,13 +44,28 @@ function getData(){
     });
 }
 
+function novoPost(){
 
-function getId(){
+    tags = ["FrontEnd", "BackEnd","Python"];
+
+    for(var i=0; i< tags.length; i++){
+        if(i < parseInt(tags.length/2) ){
+            $("#cont-inp-02").append("<input type='checkbox'  value='"+tags[i]+"'>"+tags[i]+"<br>");
+        }else{
+            $("#cont-inp-01").append("<input type='checkbox'  value='"+tags[i]+"'>"+tags[i]+"<br>");
+        }
+    }
+
+
+};
+
+
+function getId(url){
 
     FB.login(function(){
-        FB.api('https://www.facebook.com/quemvotou/',
+        FB.api(url,
             function(response){
-                console.log(response);
+                return {id: response.id, name: response.name};
             }
         );
     });
@@ -62,7 +77,11 @@ function login(){
     var link_post = document.getElementById("link-post").value;
     var type_post = document.getElementById("type-post")
     var type_post_selected = type_post.options[type_post.selectedIndex].value;
+    var tags = [];
 
+    $("#form-tag-newpost input:checked").each(function( i ) {
+            tags.push( $(this).val());
+    });
 
     //console.log(type_post_selected)
     if((text_post == "") && (link_post=="") && (type_post_selected== "")){
@@ -142,6 +161,88 @@ function cancelPost(){
 }
 
 
+/*
+* Pega os dados de uma página em especifico através do id
+* */
+function getDataPage(elem){
+
+    $("#bt-cadastre-page").css("display","none");
+    $("#bt-save-page").css("display","block");
+    $("#bt-remove-page").css("display","block");
+    $("#cont-lable-pagina").css("display","none");
+    $("#cont-lable-id").css("display","none");
+    $("#cont-lable-pagina").css("display","block");
+    $("#cont-lable-id").css("display","block");
+
+    //get dados do banco
+    var arrDados = [{nome:"Nome01", url:"http//:www.nome01.com",id:"080980980", tag: ["BackEnd","Python"]},
+                    {nome:"Nome02", url:"http//:www.nome02.com",id:"080976861782",  tag: ["BackEnd"]},
+                    {nome:"Nome03", url:"http//:www.nome03.com",id:"080981231431",  tag: ["Python"]}];
+
+    var index = parseInt(Math.random()*3);
+
+    $("#nome-pagina").val(arrDados[index].nome);
+    $("#url-pagina").val(arrDados[index].url);
+    $("#id-pagina").val(arrDados[index].id);
+
+    //var arrTag = ["BackEnd","Python"];
+
+    $('#form-tag-editpost input').prop('checked', false);
+
+    for(var i=0; i<arrDados[index].tag.length; i++){
+        console.log('input[value="'+arrDados[index].tag[i]+'"]');
+        $('input[value="'+arrDados[index].tag[i]+'"]').prop("checked", true);
+    };
+
+
+}
+
+
+/*
+* Acionado com o botao "página"
+* Exibe os itens referente as páginas cadastradas
+* */
+function openContPagina(){
+
+    var arrPage = [{nome: "Javascript Brasil", id: "082084392048320", tipo:"grupo" },
+                   {nome: "Programação Web", id: "082084392048320", tipo:"grupo"},
+                   {nome: "HTML CSS JS", id: "082084392048320",tipo:"pagina"},
+                  ];
+
+    //limpa a lista de tags
+    $("#cont-inp-edit-01").html("");
+    $("#cont-inp-edit-02").html("");
+    //tags
+    tags = ["FrontEnd", "BackEnd","Python"];
+    for(var i=0; i< tags.length; i++){
+        if(i < parseInt(tags.length/2) ){
+            $("#cont-inp-edit-02").append("<input type='checkbox' value='"+tags[i]+"'>"+tags[i]+"<br>");
+        }else{
+            $("#cont-inp-edit-01").append("<input type='checkbox' value='"+tags[i]+"'>"+tags[i]+"<br>");
+        }
+    }
+
+    //limpa lista de páginas
+    $("#list_paginas").html("");
+    for(var i = 0; i<arrPage.length; i++){
+        if(arrPage[i].tipo == "pagina")
+            $("#list_paginas").append("<div class='iten' id-post='"+ arrPage[i].id+"'><img src='ico-page.png'>"+arrPage[i].nome+"</div>");
+        else if(arrPage[i].tipo == "grupo")
+            $("#list_paginas").append("<div class='iten' id-post='"+ arrPage[i].id+"'><img src='icon-group.png'>"+arrPage[i].nome+"</div>");
+    }
+
+    //cadastra evento de click na lista
+    $("#list_paginas .iten").click(function(){
+        getDataPage(this);
+    });
+
+    $("#linechart_material").hide();
+    $("#gerencia_paginas").show();
+
+
+
+}
+
 $(document).ready(function(){
 
     $("#bt-novo-post").click(function(){
@@ -149,6 +250,8 @@ $(document).ready(function(){
         $("#bt-novo-post").css("display","none");
         $("#table-post").css("display","none");
         $("#display-block").css("display","block");
+
+        novoPost();
     });
 
     $("#bt-send-post").bind("click", function(){
@@ -157,5 +260,63 @@ $(document).ready(function(){
 
     $("#bt-cancel-post").bind("click", function(){
         cancelPost();
+    });
+
+    $("#bt-pagina").bind("click", function(){
+        openContPagina()
+    });
+
+    $("#bt-graficos").bind("click", function(){
+        $("#linechart_material").show();
+        $("#gerencia_paginas").hide();
+        chart.draw(data, options);
+    });
+
+    $("#bt-more-page").bind("click", function(){
+        if( (parseInt($("#list_paginas .iten").length)) *parseInt($("#list_paginas .iten").css("height"))   > (parseInt($("#list_paginas").css("top"))*-1 + 350) )
+            $("#list_paginas").css("top",(parseInt($("#list_paginas").css("top")) -50)+"px");
+    });
+
+
+    $("#bt-less-page").bind("click", function(){
+        if( parseInt($("#list_paginas").css("top")) < 0 ){
+            $("#list_paginas").css("top", (parseInt($("#list_paginas").css("top")) +50)+"px");
+        }
+    });
+
+
+    $("#bt-new-page").bind("click", function(){
+        $("#bt-cadastre-page").css("display","block");
+        $("#bt-save-page").css("display","none");
+        $("#bt-remove-page").css("display","none");
+
+        $("#cont-lable-pagina").css("display","none");
+        $("#cont-lable-id").css("display","none");
+
+        $("#nome-pagina").val("");
+        $("#url-pagina").val("");
+        $("#id-pagina").val("");
+
+        //var arrTag = ["BackEnd","Python"];
+
+        $('#form-tag-editpost input').prop('checked', false);
+    });
+
+
+    $("#bt-cadastre-page").bind("click", function(){
+        var url = $("#url-pagina").val();
+        if(url != ""){
+            var dados = getId(url);
+            console.log(dados.id, dados.name);
+        }
+    });
+
+
+    $("#bt-save-page").bind("click", function(){
+        alert("salvar")
+    });
+
+    $("#bt-remove-page").bind("click", function(){
+        alert("remover")
     });
 });

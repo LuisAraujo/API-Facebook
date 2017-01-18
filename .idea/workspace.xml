@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e3d4395-9736-40f7-9623-991e12901b0d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screenblock.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ico-page.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/icon-group.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/new-page.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style2.css" afterPath="$PROJECT_DIR$/style2.css" />
@@ -32,7 +34,7 @@
       <file leaf-file-name="style2.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style2.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="44" selection-start="3194" selection-end="3194" vertical-scroll-proportion="0.36" vertical-offset="2661" max-vertical-offset="3723">
+            <state line="297" column="24" selection-start="5293" selection-end="5293" vertical-scroll-proportion="-13.48" vertical-offset="4712" max-vertical-offset="7327">
               <folding />
             </state>
           </provider>
@@ -41,10 +43,17 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="35" selection-start="3776" selection-end="3776" vertical-scroll-proportion="-19.23077" vertical-offset="1472" max-vertical-offset="2278">
+            <state line="90" column="38" selection-start="2788" selection-end="2805" vertical-scroll-proportion="20.72549" vertical-offset="2587" max-vertical-offset="3621">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#div#3;n#div#1;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#3;n#div#1;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,7 +62,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="7" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.3763021" vertical-offset="646" max-vertical-offset="2822">
+            <state line="295" column="28" selection-start="9418" selection-end="9418" vertical-scroll-proportion="0.24495289" vertical-offset="4833" max-vertical-offset="5576">
               <folding />
             </state>
           </provider>
@@ -239,6 +248,13 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#3;n#div#1;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#3;n#div#1;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -264,26 +280,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/style2.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="35" selection-start="3776" selection-end="3776" vertical-scroll-proportion="-19.23077" vertical-offset="1472" max-vertical-offset="2278">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="297" column="24" selection-start="5293" selection-end="5293" vertical-scroll-proportion="-13.48" vertical-offset="4712" max-vertical-offset="7327">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style2.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="44" selection-start="3194" selection-end="3194" vertical-scroll-proportion="0.36" vertical-offset="2661" max-vertical-offset="3723">
-          <folding />
+        <state line="90" column="38" selection-start="2788" selection-end="2805" vertical-scroll-proportion="20.72549" vertical-offset="2587" max-vertical-offset="3621">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#3;n#div#1;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#3;n#div#1;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="7" selection-start="1550" selection-end="1550" vertical-scroll-proportion="0.3763021" vertical-offset="646" max-vertical-offset="2822">
+        <state line="295" column="28" selection-start="9418" selection-end="9418" vertical-scroll-proportion="0.24495289" vertical-offset="4833" max-vertical-offset="5576">
           <folding />
         </state>
       </provider>
