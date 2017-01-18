@@ -306,7 +306,11 @@ $(document).ready(function(){
     $("#bt-cadastre-page").bind("click", function(){
         var url = $("#url-pagina").val();
         if(url != ""){
-            var dados = cadastraPagina(url,  $('#form-tag-editpost input[checked]'));
+            var tags = [];
+            $('#form-tag-editpost input:checked').each(function( i ) {
+                tags.push( $(this).val());
+            });
+            var dados = cadastraPagina(url, tags);
             //console.log(dados.id, dados.name);
         }
     });
