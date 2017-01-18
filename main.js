@@ -60,12 +60,12 @@ function novoPost(){
 };
 
 
-function getId(url,callback){
+function cadastraPagina(url,tags){
 
     FB.login(function(){
         FB.api(url,
             function(response){
-                callback({id: response.id, name: response.name});
+                console.log( {id: response.id, name: response.name}, tags);
             }
         );
     });
@@ -206,7 +206,7 @@ function openContPagina(){
 
     var arrPage = [{nome: "Javascript Brasil", id: "082084392048320", tipo:"grupo" },
                    {nome: "Programação Web", id: "082084392048320", tipo:"grupo"},
-                   {nome: "HTML CSS JS", id: "082084392048320",tipo:"pagina"},
+                   {nome: "HTML CSS JS", id: "082084392048320",tipo:"pagina"}
                   ];
 
     //limpa a lista de tags
@@ -306,7 +306,7 @@ $(document).ready(function(){
     $("#bt-cadastre-page").bind("click", function(){
         var url = $("#url-pagina").val();
         if(url != ""){
-            var dados = getId(url, console.log);
+            var dados = cadastraPagina(url,  $('#form-tag-editpost input[checked]'));
             //console.log(dados.id, dados.name);
         }
     });
