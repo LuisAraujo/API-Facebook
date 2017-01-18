@@ -62,13 +62,13 @@ function novoPost(){
 
 function cadastraPagina(url,tags){
 
-    FB.login(function(){
+    //FB.login(function(){
         FB.api(url,
             function(response){
                 console.log( {id: response.id, name: response.name}, tags);
             }
         );
-    });
+    //});
 
 }
 function login(){
