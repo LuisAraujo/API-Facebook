@@ -62,15 +62,77 @@ function novoPost(){
 
 function cadastraPagina(url,tags){
 
+   /* var jquery = $.post( "interfaceDMYT.php",{tipo: "insert_page", name:"Quem Votou?", id:"592202380964866", tags:tags}, function() { })
+        .done(function(data){
+            data_json = jQuery.parseJSON(data);
+            if(data_json.status == "erro01")
+                alert("página duplicada")
+            else if (data_json.status == "erro02")
+                alert("erro ao inserir pagina")
+            else if (data_json.status == "erro03")
+                alert("erro ao inserir tags")
+            else if (data_json.status == "ok")
+                alert("operação realizada com sucesso");
+
+
+        }).fail(function(){
+
+        });
+    */
+
     FB.login(function(){
         FB.api(url,
             function(response){
-                console.log( {id: response.id, name: response.name}, tags);
+                var jquery = $.post( "interfaceDMYT.php",{tipo: "insert_page", name:response.name, id:response.id, tags:tags}, function() { })
+                    .done(function(data){
+                        data_json = jQuery.parseJSON(data);
+                        if(data_json.status == "erro01")
+                            alert("página duplicada")
+                        else if (data_json.status == "erro02")
+                            alert("erro ao inserir pagina")
+                        else if (data_json.status == "erro03")
+                            alert("erro ao inserir tags")
+                        else if (data_json.status == "ok")
+                            alert("operação realizada com sucesso");
+
+                    }).fail(function(){   });
+
             }
         );
     });
+}
+
+
+function getTags( callback ){
+
+    var jquery = $.post( "interfaceDMYT.php",{tipo: "get_tags"}, function() { })
+        .done(function(data){
+            callback( data.split(" "));
+
+        }).fail(function(){
+
+   });
+}
+
+function getPaginas( callback ){
+
+    var jquery = $.post( "interfaceDMYT.php",{tipo: "get_paginas"}, function() { })
+        .done(function(data){
+            data_json = [];
+            arr = data.split("&");
+
+            for(var i=0; i<arr.length; i++){
+                data_json.push(jQuery.parseJSON(arr[i]));
+            }
+
+            callback(data_json)
+
+        }).fail(function(){
+
+        });
 
 }
+
 function login(){
 
     var text_post = document.getElementById("text-post").value;
@@ -165,7 +227,6 @@ function cancelPost(){
 * Pega os dados de uma página em especifico através do id
 * */
 function getDataPage(elem){
-
     $("#bt-cadastre-page").css("display","none");
     $("#bt-save-page").css("display","block");
     $("#bt-remove-page").css("display","block");
@@ -181,17 +242,17 @@ function getDataPage(elem){
 
     var index = parseInt(Math.random()*3);
 
-    $("#nome-pagina").val(arrDados[index].nome);
-    $("#url-pagina").val(arrDados[index].url);
-    $("#id-pagina").val(arrDados[index].id);
+    $("#id-pagina").val($(elem).attr('id-post'));
+    $("#nome-pagina").val($(elem).text());
+    $("#url-pagina").val('https://www.facebook.com/'+$(elem).attr('id-post'));
 
     //var arrTag = ["BackEnd","Python"];
 
     $('#form-tag-editpost input').prop('checked', false);
 
-    for(var i=0; i<arrDados[index].tag.length; i++){
-        console.log('input[value="'+arrDados[index].tag[i]+'"]');
-        $('input[value="'+arrDados[index].tag[i]+'"]').prop("checked", true);
+    var tags = $(elem).attr('tags').split("%");
+    for(var i=0; i<tags.length; i++){
+        $('input[value="'+tags[i]+'"]').prop("checked", true);
     };
 
 
@@ -213,28 +274,37 @@ function openContPagina(){
     $("#cont-inp-edit-01").html("");
     $("#cont-inp-edit-02").html("");
     //tags
-    tags = ["FrontEnd", "BackEnd","Python"];
-    for(var i=0; i< tags.length; i++){
-        if(i < parseInt(tags.length/2) ){
-            $("#cont-inp-edit-02").append("<input type='checkbox' value='"+tags[i]+"'>"+tags[i]+"<br>");
-        }else{
-            $("#cont-inp-edit-01").append("<input type='checkbox' value='"+tags[i]+"'>"+tags[i]+"<br>");
+    getTags(function(tags){
+        for(var i=0; i< tags.length; i++){
+            if(i < parseInt(tags.length/2) ){
+                $("#cont-inp-edit-02").append("<input type='checkbox' value='"+tags[i]+"'>"+tags[i]+"<br>");
+            }else{
+                $("#cont-inp-edit-01").append("<input type='checkbox' value='"+tags[i]+"'>"+tags[i]+"<br>");
+            }
         }
-    }
+    });
+
 
     //limpa lista de páginas
     $("#list_paginas").html("");
-    for(var i = 0; i<arrPage.length; i++){
-        if(arrPage[i].tipo == "pagina")
-            $("#list_paginas").append("<div class='iten' id-post='"+ arrPage[i].id+"'><img src='ico-page.png'>"+arrPage[i].nome+"</div>");
-        else if(arrPage[i].tipo == "grupo")
-            $("#list_paginas").append("<div class='iten' id-post='"+ arrPage[i].id+"'><img src='icon-group.png'>"+arrPage[i].nome+"</div>");
-    }
+    getPaginas(function(paginas){
+        for(var i=0; i< paginas.length; i++){
+            console.log(paginas[i])
+            if(paginas[i].tipo == 0){
+                $("#list_paginas").append("<div class='iten' tags='"+ paginas[i].tags+"' id-post='"+ paginas[i].id+"'><img src='ico-page.png'>"+paginas[i].nome+"</div>");
+            }else if(paginas[i].tipo == 1){
+                $("#list_paginas").append("<div class='iten'  tags='"+ paginas[i].tags+"' id-post='"+ paginas[i].id+"'><img src='icon-group.png'>"+paginas[i].nome+"</div>");
+            }
+        }
 
-    //cadastra evento de click na lista
-    $("#list_paginas .iten").click(function(){
-        getDataPage(this);
+
+        //cadastra evento de click na lista
+        $("#list_paginas .iten").click(function(){
+            getDataPage(this);
+        });
+
     });
+
 
     $("#linechart_material").hide();
     $("#gerencia_paginas").show();
@@ -310,8 +380,10 @@ $(document).ready(function(){
             $('#form-tag-editpost input:checked').each(function( i ) {
                 tags.push( $(this).val());
             });
+            if(tags.length > 0)
             var dados = cadastraPagina(url, tags);
-            //console.log(dados.id, dados.name);
+            else
+            alert("marque ao menos uma tag");
         }
     });
 
