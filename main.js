@@ -60,12 +60,12 @@ function novoPost(){
 };
 
 
-function getId(url){
+function getId(url,callback){
 
     FB.login(function(){
         FB.api(url,
             function(response){
-                return {id: response.id, name: response.name};
+                callback({id: response.id, name: response.name});
             }
         );
     });
@@ -306,8 +306,8 @@ $(document).ready(function(){
     $("#bt-cadastre-page").bind("click", function(){
         var url = $("#url-pagina").val();
         if(url != ""){
-            var dados = getId(url);
-            console.log(dados.id, dados.name);
+            var dados = getId(url, console.log);
+            //console.log(dados.id, dados.name);
         }
     });
 
